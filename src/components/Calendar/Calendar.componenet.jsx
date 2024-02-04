@@ -95,7 +95,7 @@ function CalendarComponent({
 
     await axios
       // .post("/api/v1/contact", formData)
-      .post("https://portfolio-mim4.onrender.com", formData)
+      .get("https://portfolio-mim4.onrender.com", formData)
       .then((response) => {
         console.log(response.data, "Here!!");
         // Handle data
