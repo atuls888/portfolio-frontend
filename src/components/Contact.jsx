@@ -27,7 +27,7 @@ function Contact() {
             >
               <LinkedInIcon />
             </Link>
-            <Link to="https://github.com/atuls878" target="_blank">
+            <Link to="https://github.com/atuls888" target="_blank">
               <GitHubIcon />
             </Link>
           </div>

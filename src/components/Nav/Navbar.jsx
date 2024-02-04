@@ -56,7 +56,7 @@ function Navbar() {
           )}
           {social && (
             <li className="hover:text-green-600">
-              <Link to="https://github.com/atuls878" target="_blank">
+              <Link to="https://github.com/atuls888" target="_blank">
                 Github
               </Link>
             </li>
