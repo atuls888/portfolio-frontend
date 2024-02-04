@@ -45,7 +45,7 @@ function About() {
           <div className=" w-72  relative bottom-32 left-28">
             <img
               className="rounded-full border-solid border-green-600 border-4 "
-              src="https://lh3.googleusercontent.com/pw/ABLVV869Ycr4HaHSTJeAw4Nj2t2_bWeQBqC5-P440SUjfNrXPlSLSpuLQCUD7c6kiS1MyOM8JgK6o2qSGKdPP8Ut8JRSCsNTDJ3vQ0fhK6eVZkyx-EoNL4QNy15HdPjPGyH2c14D2BQfIRcZEWkmg3IL0ag7orfqQR76Sn9RwfHRSbxbObYYceorWWI0D33Bm93cyKnaLMniXEpgzCoE6vVJ6TTZbWiPR6BUC0DYepZn_yJr8UnmZf5ZztLJK45Soe9Cdf1XkD5H0f-KB6tLPVmXTG_McpTw0IukQXey_ZxkyW_cujzyXjc955t7sbhfqhfBUkkgy2ZvkRbbgRcq93SQ5X7n8AHQRH_5iDSebfvqfAbb-UxpaCdEecOx5BrbkdOdk_OiESIoGYgBKx8RP9jOrUwaDQ_8EKruOj4_AmzdVacWUTzZK0qISpZq6IDrGZPcksg5Sj4OUCcSyxCWC_YEZV6QhC4yB3Cafhi5DghuIZZT7LhBvrR49mEJtUV0CO8Vdhe2-bkbSJ4khDBFA_nLMugDzC34S2gU9pCjB26Eb4iDsBHTDhxIHlkple_wdbNp6cD7oQPeMi-QKvzs8JwGrdrmSmP8ZJT_J23qGg3ptjLH1L4X77ixwcknCWHavsCCh4Dyot-v1T4hka4cbhryt9NBUUbQzoxy11EBr11azrI5dyZoablZ2ACDUstVKNY-q-WmgWBvP9AhVUHm6FVnoE-XccfjoQOpbX9lAIsNXzPwTGlceP-k8vixQYuLdIZP8V0QDr0tpDo4-IZQ3qt0DwVARfQE7qa5ipGi4YXGI7qVU1yTlJb1cYeVmQzQ2IYpQguX7wQy72cizTUbNofZB_IAgKpGZ5lkm8UE5W4bLtBniwn_Ga7_yB5nyMm3o6O1CphFxVrDY2SmNMsXBJpzyDI=w659-h879-s-no-gm?authuser=0"
+              src="image.jpg"
               alt="Atul"
             />
           </div>
