@@ -1,0 +1,174 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: azure;
+}
+
+.button-33 {
+  margin-top: 20px;
+  width: 200px;
+  height: 50px;
+  background-color: #c2fbd7;
+  border-radius: 100px;
+  box-shadow: rgba(44, 187, 99, 0.2) 0 -25px 18px -14px inset,
+    rgba(44, 187, 99, 0.15) 0 1px 2px, rgba(44, 187, 99, 0.15) 0 2px 4px,
+    rgba(44, 187, 99, 0.15) 0 4px 8px, rgba(44, 187, 99, 0.15) 0 8px 16px,
+    rgba(44, 187, 99, 0.15) 0 16px 32px;
+  color: green;
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  font-weight: bolder;
+  font-size: x-large;
+}
+
+/* Nav Start */
+
+.button-33:hover {
+  box-shadow: rgba(44, 187, 99, 0.35) 0 -25px 18px -14px inset,
+    rgba(44, 187, 99, 0.25) 0 1px 2px, rgba(44, 187, 99, 0.25) 0 2px 4px,
+    rgba(44, 187, 99, 0.25) 0 4px 8px, rgba(44, 187, 99, 0.25) 0 8px 16px,
+    rgba(44, 187, 99, 0.25) 0 16px 32px;
+  transform: scale(1.05) rotate(-1deg);
+}
+
+@media (width > 900px) {
+  .navDiv {
+    display: flex;
+  }
+}
+
+@media (width > 900px) {
+  .social {
+    display: block;
+  }
+}
+
+@media (width > 900px) {
+  .glassEffect,
+  .navColor {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  #navContainer {
+    justify-content: space-between;
+    padding: 0 30px;
+  }
+}
+
+@media (width < 900px) {
+  #socialIcon {
+    position: absolute;
+    top: 240px;
+  }
+}
+
+@media (width < 900px) {
+  #menuIcon {
+    display: block;
+  }
+}
+
+@media (width < 900px) {
+  #navMenu {
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    line-height: 40px;
+  }
+
+  .glassEffect {
+    box-shadow: rgba(17, 104, 51, 0.4) 5px 5px, rgba(17, 104, 51, 0.4) 10px 10px,
+      rgba(17, 104, 51, 0.4) 15px 15px, rgba(17, 104, 51, 0.4) 20px 20px,
+      rgba(17, 104, 51, 0.4) 25px 25px;
+  }
+}
+
+/* Nav End */
+
+/* About Start */
+
+@media (width<1222px) {
+  .aboutDiv {
+    flex-direction: column-reverse;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+
+  .imageDiv {
+    padding: 0;
+    margin: 0;
+  }
+
+  .aboutContentDiv {
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    padding-bottom: 10px;
+  }
+}
+
+/* About End */
+
+.cardShadow {
+  box-shadow: rgb(22, 85, 41) 0px 0px 0px 2px inset,
+    rgba(17, 104, 51, 0.4) 10px -10px 0px -3px,
+    rgba(17, 104, 51, 0.4) 10px -10px,
+    rgba(17, 104, 51, 0.4) 20px -20px 0px -3px,
+    rgba(17, 104, 51, 0.4) 20px -20px;
+}
+
+.asd {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 80px;
+  place-items: center;
+  padding: 0 30px;
+}
+
+.skillDiv {
+  width: 310px;
+  height: 530px;
+}
+
+/* Contact Start */
+
+#contactDiv {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  place-items: center;
+  /* width: 1200px;
+  margin-left: 350px; */
+}
+
+@media (width < 580px) {
+  .contactIconDiv,
+  .contactContetnDiv {
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+.inputDates:hover{
+  color: rgb(66, 142, 99);
+}
+
+/* Contact End */
