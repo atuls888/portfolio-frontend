@@ -30,7 +30,7 @@ function About() {
           </p>
 
           <Link
-            to="https://drive.google.com/file/d/1PNLr3LWPTT08q4dbu-YpoG55jYlqiyQC/view?usp=sharing"
+            to="https://drive.google.com/file/d/1k0TdWJXRaordQze5kTW7EcjqfkY7ulx_/view?usp=sharing"
             target="_blank"
             className="button-33"
             role="button"
