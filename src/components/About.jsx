@@ -45,7 +45,7 @@ function About() {
           <div className=" w-72  relative bottom-32 left-28">
             <img
               className="rounded-full border-solid border-green-600 border-4 "
-              src="image.jpg"
+              src="https://i.ibb.co/gDTJdhr/image.jpg"
               alt="Atul"
             />
           </div>
