@@ -99,10 +99,10 @@ function CalendarComponent({
 
     await axios
       // .post("/api/v1/contact", formData)
-      .post("url, {
+      .post(url,formData, {
             headers: {
         "Access-Control-Allow-Origin": "*"},
-        formData})
+        })
       .then((response) => {
         console.log(response.data, "Here!!");
         // Handle data
