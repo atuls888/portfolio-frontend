@@ -101,7 +101,11 @@ function CalendarComponent({
       // .post("/api/v1/contact", formData)
       .post(url,formData, {
             headers: {
-        "Access-Control-Allow-Origin": "*"},
+        "Access-Control-Allow-Origin": "*",
+            "mode": "no-cors",
+              "cache": "no-cache",
+              "redirect":"follow"
+            },
         })
       .then((response) => {
         console.log(response.data, "Here!!");
