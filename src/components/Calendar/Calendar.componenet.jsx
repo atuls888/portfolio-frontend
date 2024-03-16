@@ -93,9 +93,12 @@ function CalendarComponent({
       Min: min,
     };
 
+    //
+    //https://sheet.best/api/sheets/f64c14bb-7b5e-444a-8afb-a965de7fa5c6
+
     await axios
       // .post("/api/v1/contact", formData)
-      .post("https://sheet.best/api/sheets/f64c14bb-7b5e-444a-8afb-a965de7fa5c6", formData)
+      .post("https://script.google.com/macros/s/AKfycbx39nesvYlKwnzxaP76G9owoGnD8x1maji3EP5hkoSBq0g2mhRf0bxNTP0rrnnW6b4sKQ/exec", formData)
       .then((response) => {
         console.log(response.data, "Here!!");
         // Handle data
