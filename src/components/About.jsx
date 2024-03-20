@@ -15,7 +15,7 @@ function About() {
             <div className=" font-extrabold py-2 mx-3 ">
               <Typewriter
                 options={{
-                  strings: ["<span style='color: green;'>Frontend Developer</span>"],
+                  strings: ["<span style='color: green;'>Google Workspace Developer</span>"],
                   autoStart: true,
                   loop: true,
                   
@@ -25,8 +25,8 @@ function About() {
           </div>
           <p className="text-stone-600 leading-7 text-2xl py-4 text-wrap">
             Highly skilled and motivated developer with two years of experience
-            in HTML, CSS and JavaScript, seeking a challenging position to
-            leverage my expertise in frontend web development.
+            in HTML, CSS, Appscript and JavaScript, seeking a challenging position to
+            leverage my expertise in Software development.
           </p>
 
           <Link
