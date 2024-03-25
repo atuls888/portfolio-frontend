@@ -15,7 +15,7 @@ function About() {
             <div className=" font-extrabold py-2 mx-3 ">
               <Typewriter
                 options={{
-                  strings: ["<span style='color: green;'>Google Workspace Developer</span>"],
+                  strings: ["<span style='color: green;'>Software Developer</span>"],
                   autoStart: true,
                   loop: true,
                   
