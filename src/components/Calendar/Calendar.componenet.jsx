@@ -93,9 +93,9 @@ function CalendarComponent({
       Min: min,
     };
 
-    // let url='https://script.google.com/macros/s/AKfycbx39nesvYlKwnzxaP76G9owoGnD8x1maji3EP5hkoSBq0g2mhRf0bxNTP0rrnnW6b4sKQ/exec'
+     let url='https://script.google.com/macros/s/AKfycbx39nesvYlKwnzxaP76G9owoGnD8x1maji3EP5hkoSBq0g2mhRf0bxNTP0rrnnW6b4sKQ/exec'
 
-    let url=import.meta.env.VITE_WEB_URL
+    // let url=import.meta.env.VITE_WEB_URL
 
 await fetch(url, {
     method: "POST", // *GET, POST, PUT, DELETE, etc.
