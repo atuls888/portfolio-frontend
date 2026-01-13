@@ -49,7 +49,7 @@ export default function Login() {
 
     // window.location.href = "https://example.com/dashboard";
 
-    let userDetails = `email=${email}&name=${name}&picture=${picture}`;
+    let userDetails = `${email}|${name}|${picture}`;
     let encryptedData = encryptData(userDetails);
     let url = `${redirectUrl}?auth=${encryptedData}`;
     console.log(url);
