@@ -32,10 +32,10 @@ export default function Login() {
     });
   }
 
-      function encryptData(text) {
-      const ciphertext = CryptoJS.AES.encrypt(text, SECRET_KEY).toString();
-      return encodeURIComponent(ciphertext);
-    }
+  function encryptData(text) {
+    const ciphertext = CryptoJS.AES.encrypt(text, SECRET_KEY).toString();
+    return encodeURIComponent(ciphertext);
+  }
 
   function handleLogin(response) {
     const token = response.credential;
@@ -49,9 +49,10 @@ export default function Login() {
 
     // window.location.href = "https://example.com/dashboard";
 
-
     let userDetails = `email=${email}&name=${name}&picture=${picture}`;
-    window.location.href = `${redirectUrl}?auth=${encryptData(userDetails)}`;
+    let url = `${redirectUrl}?auth=${encryptData(userDetails)}`;
+    console.log(url);
+    window.location.href = url;
   }
 
   return (
@@ -71,5 +72,3 @@ const styles = {
     backgroundColor: "#09090B",
   },
 };
-
-
