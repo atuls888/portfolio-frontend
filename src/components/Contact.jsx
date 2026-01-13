@@ -9,7 +9,7 @@ import Calendar from "./Calendar/Calendar";
 function Contact() {
   const mailBody = `mailto:atuls878@gmail.com?subject=Let's Connect&body=Hi Atul,%0D`;
   return (
-    <div className=" flex justify-around items-center">
+    <div className=" flex justify-around items-center pt-20">
       <div id="contactDiv" className="mt-12 gap-36">
     {/* <div > */}
     <div className="flex flex-col contactContetnDiv pr-10">

@@ -3,7 +3,7 @@ import Skill from "./Skills.Component";
 function Skills() {
   return (
     // <div className="flex gap-10 p-10">
-    <div className="asd">
+    <div className="skills">
       <Skill
         link="/about"
         skills={[

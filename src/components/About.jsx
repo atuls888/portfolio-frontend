@@ -5,7 +5,7 @@ import Typewriter from "typewriter-effect";
 function About() {
   return (
     
-      <div className="flex  justify-around items-center aboutDiv">
+      <div className="flex  justify-around items-center aboutDiv p-20">
         
         <div className=" flex flex-col  pl-48 pt-5 aboutContentDiv">
           <div className="text-6xl font-extrabold py-2">Hi, I am</div>

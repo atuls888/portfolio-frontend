@@ -136,12 +136,12 @@
     rgba(17, 104, 51, 0.4) 20px -20px;
 }
 
-.asd {
+.skills {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 80px;
   place-items: center;
-  padding: 0 30px;
+  padding:100px;
 }
 
 .skillDiv {
