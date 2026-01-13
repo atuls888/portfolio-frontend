@@ -70,13 +70,14 @@ export default function Login() {
 
     let { email, name, picture } = payload;
     let redirectUrl = import.meta.env.VITE_REDIRECT_URL;
+    let timer=new Date().getTime();
     // console.log("User:", payload);
 
     // localStorage.setItem("user", JSON.stringify(payload));
 
     // window.location.href = "https://example.com/dashboard";
 
-    let userDetails = `${email}|${name}|${picture}`;
+    let userDetails = `${email}|${name}|${picture}|${timer}`;
     let encryptedData = encryptData(userDetails);
     // let encryptedData = encodeData(userDetails);
     let url = `${redirectUrl}?p=${encryptedData}`;
