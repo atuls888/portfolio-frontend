@@ -50,9 +50,10 @@ export default function Login() {
     // window.location.href = "https://example.com/dashboard";
 
     let userDetails = `email=${email}&name=${name}&picture=${picture}`;
-    let url = `${redirectUrl}?auth=${encryptData(userDetails)}`;
+    let encryptedData = encryptData(userDetails);
+    let url = `${redirectUrl}?auth=${encryptedData}`;
     console.log(url);
-    window.location.href = url;
+    // window.location.href = url;
   }
 
   return (
