@@ -32,10 +32,32 @@ export default function Login() {
     });
   }
 
-  function encryptData(text) {
-    const ciphertext = CryptoJS.AES.encrypt(text, SECRET_KEY).toString();
-    return encodeURIComponent(ciphertext);
-  }
+  const encodeData = (str) => {
+    return str
+      .split("")
+      .map((char) => {
+        // 1. Handle Lowercase (a-z) -> Shift 4
+        if (/[a-z]/.test(char)) {
+          return String.fromCharCode(((char.charCodeAt(0) - 97 + 4) % 26) + 97);
+        }
+
+        // 2. Handle Uppercase (A-Z) -> Shift 4
+        if (/[A-Z]/.test(char)) {
+          return String.fromCharCode(((char.charCodeAt(0) - 65 + 4) % 26) + 65);
+        }
+
+        // 3. Handle Numbers (0-9) -> Shift 33
+        // (Digit + 33) % 10 keeps it a digit
+        if (/[0-9]/.test(char)) {
+          let digit = parseInt(char);
+          return ((digit + 33) % 10).toString();
+        }
+
+        // Keep special characters (@, .) as they are
+        return char;
+      })
+      .join("");
+  };
 
   function handleLogin(response) {
     const token = response.credential;
@@ -49,9 +71,10 @@ export default function Login() {
 
     // window.location.href = "https://example.com/dashboard";
 
-    let userDetails = `${email}`;
-    let encryptedData = encryptData(userDetails);
-    let url = `${redirectUrl}?auth=${encryptedData}&name=${name}&picture=${picture}`;
+    let userDetails = `${email}|${name}|${picture}`;
+    // let encryptedData = encryptData(userDetails);
+    let encryptedData = encodeData(userDetails);
+    let url = `${redirectUrl}?auth=${encryptedData}`;
     console.log(url);
     // window.location.href = url;
   }
