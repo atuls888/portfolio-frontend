@@ -12,18 +12,24 @@ import Experience from "./components/Experience";
 import Contact from "./components/Contact";
 import About from "./components/About";
 import Skills from "./components/Skills/Skills";
+import Login from "./components/Login";
 
 
 const router = createBrowserRouter(
   createRoutesFromElements(
+    <>
+    
     <Route path="/" element={<Layout />}>
       <Route path="" element={<About />} />
       <Route path="/about" element={<About />} />
       <Route path="skills" element={<Skills />} />
       <Route path="contact" element={<Contact />} />
       <Route path="experience" element={<Experience />} />
-       <Route path="*" element={<About />} />
+       <Route path="/*" element={<About />} />
+       {/* <Route path="/login" element={<Login />} /> */}
     </Route>
+    <Route path="/login" element={<Login />} />
+    </>
   )
 );
 
