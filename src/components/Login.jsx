@@ -1,6 +1,8 @@
 import { useEffect, useRef } from "react";
+import CryptoJS from "crypto-js";
 
-const CLIENT_ID =import.meta.env.VITE_CLIENT_ID // from GCP
+const CLIENT_ID = import.meta.env.VITE_CLIENT_ID; // from GCP
+const SECRET_KEY = import.meta.env.VITE_SECRET_KEY;
 
 export default function Login() {
   const googleBtnRef = useRef(null);
@@ -41,8 +43,14 @@ export default function Login() {
     // localStorage.setItem("user", JSON.stringify(payload));
 
     // window.location.href = "https://example.com/dashboard";
-    window.location.href = `${redirectUrl}?email=${email}&name=${name}&picture=${picture}`;
+    let userDetails = `email=${email}&name=${name}&picture=${picture}`;
+    window.location.href = `${redirectUrl}?auth=${encryptData(userDetails)}`;
   }
+
+  const encryptData = (text) => {
+    const ciphertext = CryptoJS.AES.encrypt(text, SECRET_KEY).toString();
+    return encodeURIComponent(ciphertext);
+  };
 
   return (
     <div style={styles.container}>
@@ -61,3 +69,5 @@ const styles = {
     backgroundColor: "#09090B",
   },
 };
+
+const protectedUrl = `/about?auth=${encryptData("user@gmail.com")}`;
