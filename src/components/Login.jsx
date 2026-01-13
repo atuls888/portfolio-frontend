@@ -32,6 +32,11 @@ export default function Login() {
     });
   }
 
+      function encryptData(text) {
+      const ciphertext = CryptoJS.AES.encrypt(text, SECRET_KEY).toString();
+      return encodeURIComponent(ciphertext);
+    }
+
   function handleLogin(response) {
     const token = response.credential;
     const payload = JSON.parse(atob(token.split(".")[1]));
@@ -43,14 +48,11 @@ export default function Login() {
     // localStorage.setItem("user", JSON.stringify(payload));
 
     // window.location.href = "https://example.com/dashboard";
+
+
     let userDetails = `email=${email}&name=${name}&picture=${picture}`;
     window.location.href = `${redirectUrl}?auth=${encryptData(userDetails)}`;
   }
-
-  const encryptData = (text) => {
-    const ciphertext = CryptoJS.AES.encrypt(text, SECRET_KEY).toString();
-    return encodeURIComponent(ciphertext);
-  };
 
   return (
     <div style={styles.container}>
@@ -70,4 +72,4 @@ const styles = {
   },
 };
 
-const protectedUrl = `/about?auth=${encryptData("user@gmail.com")}`;
+
