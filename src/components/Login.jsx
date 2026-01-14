@@ -1,22 +1,23 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import CryptoJS from "crypto-js";
 
-const CLIENT_ID = import.meta.env.VITE_CLIENT_ID; // from GCP
+const CLIENT_ID = import.meta.env.VITE_CLIENT_ID; 
 const SECRET_KEY = import.meta.env.VITE_SECRET_KEY;
 
 export default function Login() {
   const googleBtnRef = useRef(null);
+  const [appUrl, setAppUrl] = useState(""); // Added state for iframe
 
   useEffect(() => {
     const interval = setInterval(() => {
-      if (window.google && googleBtnRef.current) {
+      if (window.google && googleBtnRef.current && !appUrl) {
         clearInterval(interval);
         initGoogle();
       }
     }, 100);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [appUrl]);
 
   function initGoogle() {
     window.google.accounts.id.initialize({
@@ -26,38 +27,9 @@ export default function Login() {
 
     window.google.accounts.id.renderButton(googleBtnRef.current, {
       theme: "filled_black",
-      size: "large",
-      // text: "continue_with",
-      // shape: "pill",
+      size: "large"
     });
   }
-
-  // const encodeData = (str) => {
-  //   return str
-  //     .split("")
-  //     .map((char) => {
-  //       // 1. Handle Lowercase (a-z) -> Shift 4
-  //       if (/[a-z]/.test(char)) {
-  //         return String.fromCharCode(((char.charCodeAt(0) - 97 + 4) % 26) + 97);
-  //       }
-
-  //       // 2. Handle Uppercase (A-Z) -> Shift 4
-  //       if (/[A-Z]/.test(char)) {
-  //         return String.fromCharCode(((char.charCodeAt(0) - 65 + 4) % 26) + 65);
-  //       }
-
-  //       // 3. Handle Numbers (0-9) -> Shift 33
-  //       // (Digit + 33) % 10 keeps it a digit
-  //       if (/[0-9]/.test(char)) {
-  //         let digit = parseInt(char);
-  //         return ((digit + 33) % 10).toString();
-  //       }
-
-  //       // Keep special characters (@, .) as they are
-  //       return char;
-  //     })
-  //     .join("");
-  // };
 
   function encryptData(text) {
     const ciphertext = CryptoJS.AES.encrypt(text, SECRET_KEY).toString();
@@ -74,17 +46,26 @@ export default function Login() {
 
     let userDetails = `${email}|${name}|${picture}|${timer}`;
     let encryptedData = encryptData(userDetails);
-    // let encryptedData = encodeData(userDetails);
     let url = `${redirectUrl}?p=${encryptedData}`;
 
     sessionStorage.setItem("user", JSON.stringify(encryptedData));
 
-    window.location.href = url;
+    // window.location.href = url; // Replaced with state update
+    setAppUrl(url); 
   }
 
   return (
     <div style={styles.container}>
-      <div ref={googleBtnRef}></div>
+      {!appUrl ? (
+        <div ref={googleBtnRef}></div>
+      ) : (
+        <iframe
+          src={appUrl}
+          style={styles.iframe}
+          title="App"
+          allow="storage-access; clipboard-write"
+        />
+      )}
     </div>
   );
 }
@@ -92,10 +73,18 @@ export default function Login() {
 const styles = {
   container: {
     height: "100vh",
+    width: "100vw",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
     fontFamily: "Arial",
     backgroundColor: "#09090B",
+    margin: 0,
+    overflow: "hidden"
   },
+  iframe: {
+    width: "100%",
+    height: "100%",
+    border: "none",
+  }
 };
