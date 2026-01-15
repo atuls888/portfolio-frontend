@@ -5,19 +5,19 @@ function Skills() {
     // <div className="flex gap-10 p-10">
     <div className="skills">
       <Skill
-        link="/about"
+        link="https://society.kasbaa.net/"
         skills={[
-          "Google Calendar API",
           "Vitejs",
           "Tailwindcss",
-          "Node.js",
-          "Express",
+          "Shadcn UI",
+          "Tanstack Query",
           "React Router",
           "Google Sheets",
-          "Material UI",
+          "Context API",
+          "Apps Script",
         ]}
-        projectName="Portfolio"
-        description="Created a custom Calendar in Vite to schedule Google meet events using Google Calendar API, Sheets, Node.js and Express. Tailwindcss and Material UI for design and React Router to navigate between pages.  "
+        projectName="Society Management"
+        description="Society management web app to manage members, events, notices and payments. Built using React.js with Vite, Shadcn UI and Tailwindcss for frontend. Apps Script for backend, Google Sheets as database to store members and payment data."
       />
       <Skill
         target="_blank"
