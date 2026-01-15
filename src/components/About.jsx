@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import HeroBgAnimation from "./HeroBgAnimation/index.jsx";
 import Typewriter from "typewriter-effect";
-
+import Image from "../assets/image.jpg"
 function About() {
   return (
     
@@ -45,7 +45,7 @@ function About() {
           <div className=" w-72  relative bottom-32 left-28">
             <img
               className="rounded-full border-solid border-green-600 border-4 "
-              src="https://i.ibb.co/gDTJdhr/image.jpg"
+              src={Image}
               alt="Atul"
             />
           </div>
@@ -54,5 +54,5 @@ function About() {
     
   );
 }
-
+//https://i.ibb.co/gDTJdhr/image.jpg
 export default About;
