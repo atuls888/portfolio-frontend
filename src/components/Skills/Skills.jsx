@@ -17,7 +17,7 @@ function Skills() {
           "Apps Script",
         ]}
         projectName="Society Management"
-        description="Society management web app to manage members, events, notices and payments. Built using React.js with Vite, Shadcn UI and Tailwindcss for frontend. Apps Script for backend, Google Sheets as database to store members and payment data."
+        description="Society management web app to manage members, events, notices and payments. Built using Vite, Shadcn UI and Tailwindcss for frontend. Apps Script for backend, Google Sheets as database to store members and payment data."
       />
       <Skill
         target="_blank"
