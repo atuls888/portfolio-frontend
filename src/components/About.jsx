@@ -33,7 +33,7 @@ function About() {
         </p>
 
         <Link
-          to="https://drive.google.com/file/d/1aO1cwUtxhy0PGK3CaKy9MwbS5ADySONO/view?usp=sharing"
+          to="https://drive.google.com/file/d/1CH7qqh2hG6fJsZ2_fQj3cZhPNlTpJYmm/view?usp=sharing"
           target="_blank"
           className="button-33"
           role="button"
